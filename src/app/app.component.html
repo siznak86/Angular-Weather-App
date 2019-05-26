@@ -1,0 +1,20 @@
+<div  style="text-align:center">
+    Please Enter City and State:
+<br>
+    <input [(ngModel)]="city" placeholder="city" />
+    <input [(ngModel)]="state" placeholder="state" />
+    <button (click)="getLocation()">Get Weather</button>
+    <hr />
+    Searching for {{city}}, {{state}}
+    <hr />
+    Results for:
+    <h1>{{getWeather.location.name}}</h1>
+    <h3>{{getWeather.location.latitude}}, {{getWeather.location.longitude}}</h3>
+    <h3>{{getWeather.date}}</h3>
+    <h3>Weather: {{getWeather.condition}}</h3>
+    <img [src]='getWeather.icon'/>
+    <h3>Temperature: {{getWeather.temperature.current}}°F</h3>
+    <h3>High: {{getWeather.temperature.maximum}}°F</h3>
+    <h3>Low: {{getWeather.temperature.minimum}}°F</h3>
+
+</div>
